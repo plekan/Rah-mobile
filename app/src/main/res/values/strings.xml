@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rah</string>
+    <string name="LoginButtonText">Login</string>
 </resources>
