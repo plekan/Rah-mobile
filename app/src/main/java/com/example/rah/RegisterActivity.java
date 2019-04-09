@@ -40,11 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
         findViewById(R.id.buttonRegister).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 User user = new User();
                 user.firstName = ((TextView)findViewById(R.id.plName)).getText().toString();
                 user.lastName = ((TextView)findViewById(R.id.plLastName)).getText().toString();
                 user.email = ((TextView)findViewById(R.id.plEmail)).getText().toString();
                 mUserViewModel.insert(user);
+                Intent intent = new Intent(v.getContext(), Dashboard.class);
+                startActivity(intent);
 
             }
         });
